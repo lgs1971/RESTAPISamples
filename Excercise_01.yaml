@@ -1,0 +1,27 @@
+openapi: 3.0.0
+
+info:
+  title: REST API for accessing the classicmodels database
+  description: This REST API was created by Ragnar Storstrøm as a demo on how to write a REST API using the Slim framework
+  version: 0.0.1
+  
+servers:
+  - url: http://demorestapi.localhost/DemoRESTAPI
+    description: REST API server in my internal lab
+
+paths:
+  /:
+    get:
+      summary: Returns information about which REST API you have accessed
+      description: This is a test endpoint designed to prove you can access the demo REST API
+      tags:
+        - REST API
+      responses:
+        '200':
+          description: A text describing the REST API is returned
+          content:
+            application/text:
+              schema: 
+                type: string
+                example:
+                  This is the REST API that allows REST access to a database server
