@@ -22,14 +22,14 @@ $config['displayErrorDetails'] = true;
 $app = new \Slim\App(['settings' => $config]);
 
 # Define a new endpoint and the response for a GET request
-$app->get('/', function (Request $Request, Response $Response)
+$app->get('/', function (Request $Request, Response $Reponse)
   {
     # Return a message for anyone that reaches this REST endpoint
     $Reponse->getBody()->write("This is the REST API that allows REST access to a database server");
     return $Reponse;
   }
 );
-
+            
 # Run the application 
 $app->run();
 
